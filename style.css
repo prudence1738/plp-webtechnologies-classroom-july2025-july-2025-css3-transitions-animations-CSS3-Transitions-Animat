@@ -1,0 +1,52 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background: #f4f4f9;
+}
+
+/* --- Part 1 --- */
+.hover-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hover-btn:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.fade-box {
+  opacity: 0;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffeb3b;
+  border-radius: 6px;
+  width: 200px;
+  animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* --- Part 3 --- */
+#animateBox {
+  width: 100px;
+  height: 100px;
+  background: tomato;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+#animateBox.active {
+  transform: rotate(360deg) scale(1.2);
+  background: limegreen;
+  }
