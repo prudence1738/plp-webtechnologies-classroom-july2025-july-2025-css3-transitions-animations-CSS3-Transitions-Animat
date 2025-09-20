@@ -1,0 +1,33 @@
+// --- Part 2: Functions & Scope ---
+
+// Global variable
+let multiplier = 2;
+
+// Function with parameter & return value
+function multiplyNumber(num) {
+  // Local scope variable
+  let result = num * multiplier;
+  return result;
+}
+
+// Function demo for Part 2
+function showResult() {
+  let number = 5;
+  let output = multiplyNumber(number);
+  document.getElementById("result").textContent =
+    `Input: ${number}, Multiplier: ${multiplier}, Result: ${output}`;
+}
+
+
+// --- Part 3: Combining CSS + JS ---
+
+// Reusable function to toggle animation class
+function toggleAnimation(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.toggle("active");
+}
+
+// Event listener for button
+document.getElementById("animateBtn").addEventListener("click", function() {
+  toggleAnimation("animateBox");
+});
